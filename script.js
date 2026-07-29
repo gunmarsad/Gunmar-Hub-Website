@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1000);
   }
 
-  startCountdown("btn1", 14);
-  startCountdown("btn2", 14);
+  startCountdown("btn1", 8);
+  startCountdown("btn2", 8);
 
 });
