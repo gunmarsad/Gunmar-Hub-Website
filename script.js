@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const links = {
     btn1: "https://ads.luaegis.net/ad-reward/checkpoint-1-e0b60aed",
-    btn2: "https://ads.luaegis.net/ad-reward/lootlabs-2655c57e"
+    btn2: "https://ads.luaegis.net/ad-reward/work-ink-fb36ed54"
   };
 
   function startCountdown(buttonId, seconds) {
