@@ -1,110 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gunmar Hub</title>
-  <link rel="icon" type="image/png" href="logo.png">
-  <link rel="apple-touch-icon" href="logo.png">
-  <meta name="theme-color" content="#020617">
+    <title>Gunmar Hub - Key System</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<script>
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
-
-    setTimeout(() => {
-      loader.classList.add("hide");
-    }, 1900); // loader duration
-  });
-</script>
 
 <body>
 
-  <!-- HEADER -->
-<header class="header">
-  <div class="header-left">
-    <img src="logo.png" alt="Gunmar Hub Logo" class="logo">
-    <div>
-      <h1>Gunmar Hub</h1>
-      <p>Get your access key quickly and securely</p>
-    </div>
-  </div>
+    <main class="container">
 
-  <!-- RIGHT SIDE DISCORD BUTTON -->
-  <div class="header-right">
-    <a href="https://discord.gg/dWhxP9aTeV" target="_blank" class="discord-header-btn">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/discord.svg">
-      <span>Join Discord</span>
-    </a>
-  </div>
-</header>
+        <!-- HEADER -->
+        <div class="header">
 
-  <!-- MAIN -->
-  <main class="container">
+            <img src="logo.png" class="main-logo" alt="Gunmar Hub">
 
-    <!-- HOW TO -->
-<section class="howto">
-  <h2>How to Get Your Key</h2>
+            <h1>GUNMAR HUB</h1>
 
-  <ul>
-    <li>
-      <span>1</span>
-      Click one of the buttons below
-    </li>
-    <li>
-      <span>2</span>
-      Complete the short verification
-    </li>
-    <li>
-      <span>3</span>
-      You will be redirected automatically
-    </li>
-    <li>
-      <span>4</span>
-      Copy your key and paste it in the script
-    </li>
-        <li>
-      <span>5</span>
-     if you tired of ads buy premium just click discord server button on top
-    </li>
-  </ul>
-</section>
+            <p>
+                Choose a method below to get your key
+            </p>
 
-    <!-- KEY OPTIONS -->
-    <section class="cards">
-      <div class="card">
-        <h3>Linkversite</h3>
-        <p>Quick and easy access</p>
-        <button id="btn1" disabled>Please wait... (10s)</button>
-      </div>
+        </div>
 
-      <div class="card">
-        <h3>Work.Ink</h3>
-        <p>Best for mobile</p>
-        <button id="btn2" disabled>Please wait... (10s)</button>
-      </div>
-    </section>
 
-  </main>
+        <!-- KEY OPTIONS -->
+        <section class="cards">
 
-<!-- LOADING SCREEN -->
-<div id="loader">
-  <div class="loader-content">
-    <img src="logo.png" class="loader-gif" alt="Loading">
-    <div class="spinner"></div>
-    <p>Loading Gunmar Hub...</p>
-  </div>
-</div>
 
-<!--copyright-->
-<footer class="site-footer">
-  <p>© 2026 Gunmar Hub. All rights reserved.</p>
-</footer>
+            <!-- LOOTLABS 48H -->
+            <div class="card">
 
-  <script src="script.js"></script>
+                <img src="lootlabs.png"
+                     class="method-logo"
+                     alt="LootLabs">
+
+                <h2>LootLabs 48H</h2>
+
+                <p>
+                    3 Checkpoints • 48 Hours
+                </p>
+
+                <button
+                    id="btn1"
+                    class="key-button"
+                    disabled>
+
+                    Please wait... (8s)
+
+                </button>
+
+            </div>
+
+
+
+            <!-- LOOTLABS 12H -->
+            <div class="card">
+
+                <img src="lootlabs.png"
+                     class="method-logo"
+                     alt="LootLabs">
+
+                <h2>LootLabs 12H</h2>
+
+                <p>
+                    1 Checkpoint • 12 Hours
+                </p>
+
+                <button
+                    id="btn2"
+                    class="key-button"
+                    disabled>
+
+                    Please wait... (8s)
+
+                </button>
+
+            </div>
+
+
+
+            <!-- LOOTLABS 24H -->
+            <div class="card">
+
+                <img src="lootlabs.png"
+                     class="method-logo"
+                     alt="LootLabs">
+
+                <h2>LootLabs 24H</h2>
+
+                <p>
+                    2 Checkpoints • 24 Hours
+                </p>
+
+                <button
+                    id="btn3"
+                    class="key-button"
+                    disabled>
+
+                    Please wait... (8s)
+
+                </button>
+
+            </div>
+
+
+
+            <!-- LINKVERSITE 6H -->
+            <div class="card">
+
+                <img src="linkversite.png"
+                     class="method-logo"
+                     alt="Linkversite">
+
+                <h2>Linkversite 6H</h2>
+
+                <p>
+                    1 Checkpoint • 6 Hours
+                </p>
+
+                <button
+                    id="btn4"
+                    class="key-button"
+                    disabled>
+
+                    Please wait... (8s)
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- EXTRA BUTTONS -->
+        <div class="extra-buttons">
+
+            <a
+                href="https://discord.gg/dWhxP9aTeV"
+                target="_blank"
+                class="extra-button discord">
+
+                <span>💬</span>
+
+                Join Discord
+
+            </a>
+
+
+            <a
+                href="https://youtu.be/uCeu0YzP13Y?si=9sJpYoQA2x3l-jjr"
+                class="extra-button tutorial">
+
+                <span>▶</span>
+
+                Tutorial
+
+            </a>
+
+        </div>
+
+
+        <div class="footer">
+            Gunmar Hub © 2026
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
