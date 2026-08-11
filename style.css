@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -9,27 +10,22 @@ body {
 
     background:
         radial-gradient(
-            circle at top,
-            rgba(255, 25, 85, 0.18),
-            transparent 40%
+            circle at 50% 0%,
+            rgba(255, 20, 80, 0.18),
+            transparent 45%
         ),
         #090609;
 
     color: white;
 
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    display: flex;
-    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
 
 .container {
     width: 100%;
     max-width: 1050px;
+
+    margin: auto;
 
     padding: 50px 20px;
 }
@@ -71,7 +67,7 @@ body {
         linear-gradient(
             90deg,
             #ff174f,
-            #ff5c8a
+            #ff6b91
         );
 
     -webkit-background-clip: text;
@@ -100,10 +96,7 @@ body {
     gap: 20px;
 }
 
-
 .card {
-    position: relative;
-
     padding: 30px 25px;
 
     text-align: center;
@@ -125,12 +118,8 @@ body {
         0 10px 35px
         rgba(0, 0, 0, 0.35);
 
-    transition:
-        transform 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: 0.25s ease;
 }
-
 
 .card:hover {
     transform: translateY(-5px);
@@ -164,19 +153,54 @@ body {
 }
 
 
+/* =========================
+   TEXT
+========================= */
+
 .card h2 {
     font-size: 20px;
 
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 }
 
+.description {
+    min-height: 36px;
 
-.card p {
     color: #999;
 
     font-size: 13px;
 
-    margin-bottom: 22px;
+    line-height: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   CHECKPOINT
+========================= */
+
+.checkpoint {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    margin-bottom: 18px;
+
+    border-radius: 20px;
+
+    color: #ff6b91;
+
+    background:
+        rgba(255, 30, 90, 0.09);
+
+    border:
+        1px solid
+        rgba(255, 50, 100, 0.20);
+
+    font-size: 12px;
+
+    font-weight: 700;
 }
 
 
@@ -208,12 +232,8 @@ body {
 
     cursor: pointer;
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        opacity 0.2s ease;
+    transition: 0.2s ease;
 }
-
 
 .key-button:not(:disabled):hover {
     transform: scale(1.025);
@@ -222,7 +242,6 @@ body {
         0 0 22px
         rgba(255, 25, 80, 0.55);
 }
-
 
 .key-button:disabled {
     cursor: not-allowed;
@@ -251,7 +270,6 @@ body {
 
     margin-top: 25px;
 }
-
 
 .extra-button {
     min-width: 190px;
@@ -282,11 +300,8 @@ body {
         1px solid
         rgba(255, 255, 255, 0.10);
 
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    transition: 0.2s ease;
 }
-
 
 .extra-button:hover {
     transform: translateY(-2px);
@@ -296,7 +311,6 @@ body {
         rgba(255, 30, 90, 0.25);
 }
 
-
 .discord {
     background:
         linear-gradient(
@@ -305,7 +319,6 @@ body {
             #d41452
         );
 }
-
 
 .tutorial {
     background:
@@ -335,8 +348,7 @@ body {
 @media (max-width: 700px) {
 
     .container {
-        padding:
-            35px 15px;
+        padding: 35px 15px;
     }
 
     .cards {
