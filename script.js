@@ -10,13 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
         btn2:
             "https://ads.luaegis.net/ad-reward/linkversite-6h-92417478",
 
-        // ShrinkEarn 12H - 2 Checkpoints
+        // Linkversite 24H - 3 Checkpoints
         btn3:
-            "https://ads.luaegis.net/ad-reward/shrinkearn-a271d1ff",
+            "https://ads.luaegis.net/ad-reward/linkversite-24h-cc83a54e",
 
-        // Linkversite 18H - 2 Checkpoints
+        // LootLabs 24H - 3 Checkpoints
         btn4:
-            "https://ads.luaegis.net/ad-reward/linkversite-18h-5dd673be"
+            "https://ads.luaegis.net/ad-reward/lootlabs-24h-57719747"
 
     };
 
