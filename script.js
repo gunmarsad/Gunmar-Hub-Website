@@ -1,113 +1,55 @@
-document.addEventListener("DOMContentLoaded", function () {
+// ─── NAVIGATION ───────────────────────────────────────────
+const navBtns  = document.querySelectorAll('.nav-btn');
+const pages    = document.querySelectorAll('.page');
 
-    const links = {
+function goToPage(target) {
+  pages.forEach(p => p.classList.remove('active'));
+  navBtns.forEach(b => b.classList.remove('active'));
 
-        // LootLabs 8H - 1 Checkpoint
-        btn1:
-            "https://ads.luaegis.net/ad-reward/lootlabs-12h-5ff81e86",
+  const page = document.getElementById('page-' + target);
+  const btn  = document.querySelector(`.nav-btn[data-page="${target}"]`);
 
-        // Linkversite 6H - 1 Checkpoint
-        btn2:
-            "https://ads.luaegis.net/ad-reward/linkversite-6h-92417478",
+  if (page) page.classList.add('active');
+  if (btn)  btn.classList.add('active');
 
-        // Linkversite 24H - 3 Checkpoints
-        btn3:
-            "https://ads.luaegis.net/ad-reward/linkversite-24h-cc83a54e",
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
-        // LootLabs 24H - 3 Checkpoints
-        btn4:
-            "https://ads.luaegis.net/ad-reward/lootlabs-24h-57719747"
-
-    };
-
-
-    function startCountdown(buttonId, seconds) {
-
-        const button =
-            document.getElementById(buttonId);
-
-
-        if (!button) {
-
-            console.error(
-                "Button not found:",
-                buttonId
-            );
-
-            return;
-        }
-
-
-        let timeLeft = seconds;
-
-
-        button.disabled = true;
-
-        button.textContent =
-            `Please wait... (${timeLeft}s)`;
-
-
-        const timer =
-            setInterval(function () {
-
-                timeLeft--;
-
-
-                if (timeLeft > 0) {
-
-                    button.textContent =
-                        `Please wait... (${timeLeft}s)`;
-
-                }
-
-
-                if (timeLeft <= 0) {
-
-                    clearInterval(timer);
-
-                    button.disabled = false;
-
-                    button.textContent =
-                        "Get Key";
-
-
-                    button.onclick =
-                        function () {
-
-                            const url =
-                                links[buttonId];
-
-
-                            if (!url) {
-
-                                console.error(
-                                    "No URL found for:",
-                                    buttonId
-                                );
-
-                                return;
-                            }
-
-
-                            window.location.href =
-                                url;
-
-                        };
-
-                }
-
-            }, 1000);
-    }
-
-
-    // Start countdowns
-
-    startCountdown("btn1", 8);
-
-    startCountdown("btn2", 8);
-
-    startCountdown("btn3", 8);
-
-    startCountdown("btn4", 8);
-
+navBtns.forEach(btn => {
+  btn.addEventListener('click', () => goToPage(btn.dataset.page));
 });
+
+// ─── COPY SCRIPT ──────────────────────────────────────────
+function copyScript() {
+  const code  = document.getElementById('script-code').textContent.trim();
+  const btn   = document.getElementById('copy-btn');
+  const toast = document.getElementById('toast');
+
+  navigator.clipboard.writeText(code).then(() => {
+    // Button feedback
+    btn.textContent = '✓ Copié !';
+    btn.style.background = '#22c55e';
+
+    // Toast
+    toast.classList.add('show');
+
+    setTimeout(() => {
+      btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copier le script`;
+      btn.style.background = '';
+      toast.classList.remove('show');
+    }, 2200);
+  }).catch(() => {
+    // Fallback for older browsers
+    const ta = document.createElement('textarea');
+    ta.value = code;
+    ta.style.position = 'fixed';
+    ta.style.opacity  = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2200);
+  });
+}
